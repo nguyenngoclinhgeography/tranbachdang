@@ -1,0 +1,44 @@
+SA BÀN 3D TRẬN BẠCH ĐẰNG NĂM 938 — PHIÊN BẢN 4
+
+1. MỞ TRÊN MÁY TÍNH (không cần Internet)
+   - Giải nén toàn bộ tệp ZIP.
+   - Đặt index.html, main.js, style.css cùng một thư mục.
+   - Nhấp đúp index.html bằng Microsoft Edge/Google Chrome.
+   - Nếu mở không được, thử chạy qua VS Code Live Server hoặc web server tĩnh; không cần thư viện bên ngoài.
+
+2. ĐIỀU KHIỂN
+   - Kéo chuột/1 ngón tay: xoay sa bàn.
+   - Lăn chuột / chụm hai ngón tay: phóng to và thu nhỏ.
+   - Bấm nút Cận cảnh bãi cọc, hoặc chạm nhãn BÃI CỌC NGẦM: mở tư liệu lịch sử.
+   - Bắt đầu / Tạm dừng / Về đầu / Kéo thanh tua 00:00–01:00.
+   - Các bảng Điều khiển, Chú giải, Diễn biến & câu hỏi đều có nút + / − để thu gọn.
+   - Trên điện thoại, các bảng thu gọn khi vừa mở nhằm chừa không gian xem mô hình.
+
+3. DIỄN BIẾN ĐỂ QUAN SÁT
+   - 00:00: Quân ta bố trí phục kích, thuyền Nam Hán chờ ngoài cửa sông.
+   - 00:08–00:15: Thuyền nhẹ quân ta tiến từ trong ra ngoài khiêu chiến.
+   - 00:15–00:25: Quân ta giả rút về phía trong, quân Nam Hán đuổi theo.
+   - 00:25–00:44: Nước triều rút, thuyền địch tìm cách ra biển.
+   - 00:44–01:00: Thuyền mắc cọc, đổ nghiêng, lính rơi xuống nước; có lửa và khói cách điệu.
+   - Sau 01:00: Thanh tua dừng nhưng sóng, lửa, khói và dao động nhẹ vẫn tiếp tục.
+
+4. XEM TRÊN ĐIỆN THOẠI
+   - Có thể mở qua đường dẫn website tĩnh khi đăng lên hosting tĩnh.
+   - Nếu muốn mở offline, hãy chép đủ 3 file vào cùng thư mục trên thiết bị và dùng ứng dụng/trình duyệt cho phép mở HTML cục bộ.
+   - Nên xoay ngang điện thoại nếu muốn thấy sa bàn lớn hơn; có thể thu gọn từng bảng.
+
+5. TƯ LIỆU LỊCH SỬ
+   Bảo tàng Lịch sử Quốc gia:
+   https://baotanglichsuquocgia.vn/vi/Articles/3098/13934/ngo-quyen-va-chien-thang-bach-djang-nam-938.html
+   https://baotanglichsuquocgia.vn/vi/Articles/3098/16483/ngo-quyen-nguoi-mo-djau-ky-nguyen-djoc-lap-cho-djat-nuoc-thoat-khoi-nghin-nam-bac-thuoc.html
+
+LƯU Ý: Sa bàn mô phỏng theo mô hình thủ công người dùng cung cấp; vị trí/thuyền/quân phục/số lượng cọc/hiệu ứng hỏa hoạn được minh họa, không phải phục dựng khảo cổ chính xác. Mục đích chính là giúp học sinh hiểu thủy triều, bãi cọc, nhử địch và phối hợp mai phục.
+
+
+BẢN 5 — MŨI TÊN ĐỎ & CHÚ GIẢI
+- 00:08–00:15: mũi tên đỏ tiến từ trong sông ra cửa sông, minh họa quân ta khiêu chiến.
+- 00:15–00:27: mũi tên đỏ đổi hướng vào sâu trong sông, minh họa giả rút nhử địch.
+- Từ 00:27: mũi tên đỏ nối tiếp về phía sau, minh họa quân ta thoát qua lối đã chuẩn bị.
+- Mở “Chú giải”: mỗi nội dung là một dòng riêng, kể cả trên điện thoại.
+- Thu gọn “Chú giải”: khung nhỏ lại giống bảng điều khiển và bảng diễn biến.
+- Khi cần nhìn thoáng sa bàn, bấm biểu tượng thu gọn hoặc chọn Chế độ trình chiếu.

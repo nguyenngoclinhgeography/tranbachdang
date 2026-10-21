@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071d2e">
+  <title>Bạch Đằng 938 | Sa bàn 3D · Diễn biến toàn trận</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <main id="app">
+    <canvas id="scene3d" aria-label="Sa bàn trận Bạch Đằng năm 938 có thể xoay và thu phóng"></canvas>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <button type="button" id="btnClean" class="clean-toggle" title="Ẩn/hiện bảng thông tin để trình chiếu sa bàn">⛶ Chế độ trình chiếu</button>
+    <header class="masthead">
+      <div class="eyebrow"><span class="glow-dot"></span> PHÒNG HỌC LỊCH SỬ SỐ <span class="edition">3D · PHIM TƯƠNG TÁC</span></div>
+      <h1><span class="title-line">CHIẾN THẮNG</span><span class="title-line"><em>BẠCH ĐẰNG</em> <b>938</b></span></h1>
+      <p>Quan sát sa bàn, tua diễn biến chiến trận và khám phá nghệ thuật đánh giặc của Ngô Quyền.</p>
+      <div class="hints"><span>↻ XOAY 360°</span><span>⊕ THU PHÓNG</span><span>◎ CHỌN BÃI CỌC</span></div>
+    </header>
+    <div class="right-rail" aria-label="Các bảng công cụ">
+    <aside class="control-panel collapsible" id="controlPanel" aria-label="Điều khiển mô phỏng">
+      <div class="panel-head"><span class="panel-head-label">⚙ Điều khiển</span><button type="button" class="collapse-toggle" data-collapse="controlPanel" aria-controls="controlContents" aria-expanded="true" aria-label="Thu gọn bảng điều khiển">− <span>Thu gọn</span></button></div>
+      <div class="panel-content" id="controlContents">
+      <div class="control-heading"><span class="serial">01 / ĐIỀU KHIỂN</span><span class="live-indicator">● MÔ PHỎNG</span></div>
+      <h2>Khám phá trận địa</h2>
+      <div class="view-switch"><button type="button" id="btnOverview" class="view-button active">◫ <span>Toàn cảnh</span></button><button type="button" id="btnFocus" class="view-button">⌖ <span>Cận cảnh bãi cọc</span></button></div>
+      <div class="hairline"></div>
+      <div class="stage-label">NHẢY ĐẾN GIAI ĐOẠN</div>
+      <button type="button" id="btnHigh" class="action high"><span class="action-icon">↗</span><span><strong>THỦY TRIỀU LÊN</strong><small>Tua đến lúc nước dâng</small></span><span class="arrowend">→</span></button>
+      <button type="button" id="btnLow" class="action low"><span class="action-icon">↘</span><span><strong>THỦY TRIỀU XUỐNG</strong><small>Tua đến lúc nước rút</small></span><span class="arrowend">→</span></button>
+      <div class="tide-meter"><span>MỰC NƯỚC</span><div class="meter-track"><div id="meterFill" class="meter-fill"></div></div><strong id="meterLabel">THẤP</strong></div>
+      <div class="control-foot"><button id="btnPause" type="button" title="Tạm dừng/tiếp tục phim">Ⅱ <span>Tạm dừng</span></button><button id="btnSpeed" type="button" title="Đổi tốc độ">◷ <span>1×</span></button><button id="btnReset" type="button" title="Đặt lại toàn bộ">↺ <span>Đặt lại</span></button></div>
+      </div>
+    </aside>
+    <section class="legend-panel collapsible" id="legendPanel" aria-label="Chú giải sa bàn">
+      <div class="panel-head"><span class="panel-head-label">▤ Chú giải</span><button type="button" class="collapse-toggle" data-collapse="legendPanel" aria-controls="legendContents" aria-expanded="true" aria-label="Thu gọn chú giải">− <span>Thu gọn</span></button></div>
+      <div class="panel-content legend-list" id="legendContents">
+        <div class="legend-row"><span class="legend-swatch blue" aria-hidden="true"></span><span>Hướng tiến của quân Nam Hán</span></div>
+        <div class="legend-row"><span class="legend-swatch red" aria-hidden="true"></span><span>Quân ta tiến ra nhử địch, giả rút và phản công</span></div>
+        <div class="legend-row"><span class="legend-swatch stake" aria-hidden="true"></span><span>Cọc gỗ đầu bịt sắt</span></div>
+        <div class="legend-row"><span class="legend-swatch orange" aria-hidden="true"></span><span>Chiến thuyền lớn quân địch</span></div>
+      </div>
+    </section>
+    </div><!-- /right-rail -->
+    <section class="timeline-panel" aria-label="Thanh thời gian diễn biến trận Bạch Đằng">
+      <div class="timeline-heading"><span class="serial">02 / DIỄN BIẾN TRẬN ĐÁNH</span><span id="timelineCurrentStage" class="time-stage">CHUẨN BỊ TRẬN ĐỊA</span></div>
+      <div class="timeline-main">
+        <button id="btnTimelinePlay" type="button" class="timeline-play" title="Phát hoặc tạm dừng" aria-label="Phát mô phỏng">▶ <span>Bắt đầu</span></button>
+        <div class="scrub-container">
+          <div class="time-labels"><output id="timeNow" for="timelineRange">00:00</output><span>THỜI GIAN MÔ PHỎNG</span><span id="timeTotal">01:00</span></div>
+          <input id="timelineRange" type="range" min="0" max="60" step="0.1" value="0" aria-label="Kéo để tua đến thời điểm mong muốn của trận đánh">
+        </div>
+        <button id="btnTimelineRestart" class="timeline-reset" title="Trở về đầu và dừng" type="button">↺ <span>Về đầu</span></button>
+      </div>
+      <div class="timeline-chapters" aria-label="Chọn nhanh giai đoạn">
+        <button type="button" data-seek="0"><b>00:00</b><span>Trận địa</span></button>
+        <button type="button" data-seek="8"><b>00:08</b><span>Triều lên</span></button>
+        <button type="button" data-seek="22"><b>00:22</b><span>Nhử địch</span></button>
+        <button type="button" data-seek="32"><b>00:32</b><span>Nước rút</span></button>
+        <button type="button" data-seek="44"><b>00:44</b><span>Mắc cọc</span></button>
+        <button type="button" data-seek="52"><b>00:52</b><span>Đánh chìm</span></button>
+        <button type="button" data-seek="60"><b>01:00</b><span>Chiến thắng</span></button>
+      </div>
+      <p class="timeline-tip">Kéo thanh để tua xuôi/ngược; kéo chuột trên sa bàn để xoay 360°. <span id="rendererMode">Không cần Internet.</span></p>
+    </section>
+    <section class="story-panel collapsible" id="storyPanel" aria-label="Thông tin giai đoạn">
+      <div class="panel-head"><span class="panel-head-label">◷ Diễn biến & câu hỏi</span><button type="button" class="collapse-toggle" data-collapse="storyPanel" aria-controls="storyContents" aria-expanded="true" aria-label="Thu gọn thông tin giai đoạn">− <span>Thu gọn</span></button></div>
+      <div class="panel-content" id="storyContents" aria-live="polite">
+      <div class="story-top"><span id="phaseNumber" class="serial">GIAI ĐOẠN 00</span><span id="phaseTag" class="phase-tag">QUAN SÁT</span></div>
+      <h2 id="storyTitle">Trận địa trên sông Bạch Đằng</h2>
+      <p id="storyBody">Giữ và kéo chuột để xoay sa bàn. Nhấn vào bãi cọc ở giữa sông, hoặc chọn “Cận cảnh bãi cọc” để khám phá cơ chế thủy triều.</p>
+      <div class="progress"><span id="progressFill"></span></div>
+      <div class="story-question" id="storyQuestion">Câu hỏi: Vì sao Ngô Quyền chọn cửa sông Bạch Đằng để bố trí bãi cọc?</div>
+      </div>
+    </section>
+    <div id="labels" class="labels" aria-hidden="true">
+      <div class="map-banner" data-anchor="banner">LƯỢC ĐỒ TRẬN BẠCH ĐẰNG NĂM 938</div>
+      <div class="map-sign sign-giao" data-anchor="giao"><strong>GIAO CHÂU</strong><small>(Đồng bằng Bắc Bộ)</small></div>
+      <div class="map-sign sign-luc" data-anchor="luc"><strong>LỤC CHÂU</strong><small>(Quảng Ninh)</small></div>
+      <div class="map-sign sign-cat" data-anchor="cat"><strong>ĐẢO CÁT BÀ</strong></div>
+      <div class="map-sign sign-vinh" data-anchor="vinh"><strong>VỊNH HẠ LONG</strong></div>
+      <div class="stake-marker" data-anchor="stake" id="stakeMarker"><span class="pulse"></span><span>✦ BÃI CỌC NGẦM</span><small>Chạm để đọc tư liệu</small></div>
+    </div>
+    <div id="redRouteBadge" class="route-badge" aria-hidden="true" hidden><span class="route-badge-arrow">➜</span><span id="redRouteText">QUÂN TA TIẾN RA NHỬ ĐỊCH</span></div>
+    <div class="scene-caption">SA BÀN PHỎNG THEO MÔ HÌNH THỦ CÔNG · CHUYỂN ĐỘNG ĐƯỢC ĐƠN GIẢN HÓA ĐỂ DẠY HỌC</div>
+    <div class="stake-dialog-backdrop" id="stakeDialog" hidden>
+      <section class="stake-dialog" role="dialog" aria-modal="true" aria-labelledby="stakeDialogTitle" tabindex="-1">
+        <div class="dialog-top"><span class="serial">TƯ LIỆU LỊCH SỬ · NĂM 938</span><button type="button" id="closeStakeDialog" class="dialog-close" aria-label="Đóng thông tin bãi cọc">✕ Đóng</button></div>
+        <h2 id="stakeDialogTitle">Bãi cọc ngầm trên sông Bạch Đằng</h2>
+        <p class="dialog-intro">Một trận địa được chủ động chuẩn bị để kết hợp với con nước và thế mai phục.</p>
+        <div class="stake-facts">
+          <div><strong>Chuẩn bị bãi cọc</strong><p>Ngô Quyền huy động quân dân đẵn gỗ, vót nhọn đầu cọc và bịt sắt, sau đó đóng cọc dưới lòng sông ở khu vực được lựa chọn.</p></div>
+          <div><strong>Khi thủy triều lên</strong><p>Mực nước cao che khuất các hàng cọc. Thuyền nhẹ của quân ta tiến ra khiêu chiến rồi giả rút, dẫn đoàn thuyền Nam Hán vào sâu trong cửa sông.</p></div>
+          <div><strong>Khi thủy triều xuống</strong><p>Nước rút khiến bãi cọc trở thành vật cản nguy hiểm. Kết hợp với sự phản công của quân ta, nhiều thuyền địch mắc cọc, bị hư hại và không thể thoát ra biển.</p></div>
+        </div>
+        <p class="teaching-note"><strong>Quan sát mô phỏng:</strong> Cọc được giữ nguyên vị trí; chỉ mực nước thay đổi. Hãy kéo tua về 00:08 và 00:36 để so sánh. Hình dáng, số lượng và cách sắp xếp cọc trên sa bàn là minh họa phục vụ dạy học.</p>
+        <div class="dialog-sources"><strong>Nguồn tham khảo</strong>
+          <a href="https://baotanglichsuquocgia.vn/vi/Articles/3098/13934/ngo-quyen-va-chien-thang-bach-djang-nam-938.html" target="_blank" rel="noopener noreferrer">Bảo tàng Lịch sử Quốc gia – Ngô Quyền và chiến thắng Bạch Đằng năm 938 ↗</a>
+          <a href="https://baotanglichsuquocgia.vn/vi/Articles/3098/16483/ngo-quyen-nguoi-mo-djau-ky-nguyen-djoc-lap-cho-djat-nuoc-thoat-khoi-nghin-nam-bac-thuoc.html" target="_blank" rel="noopener noreferrer">Bảo tàng Lịch sử Quốc gia – Ngô Quyền và kỷ nguyên độc lập ↗</a>
+        </div>
+        <button id="closeAndFocus" class="dialog-focus" type="button">Quan sát cận cảnh bãi cọc →</button>
+      </section>
+    </div>
+    <div id="feedback" class="feedback" role="status">Đang chuẩn bị mô phỏng 3D…</div>
+    <div id="errorOverlay" class="error-overlay" hidden><div class="error-content"><h2>Không thể hiển thị mô phỏng</h2><p id="errorText">Trình duyệt không hỗ trợ WebGL.</p><p>Hãy thử Microsoft Edge hoặc Google Chrome và bật tăng tốc đồ họa trong cài đặt trình duyệt.</p></div></div>
+  </main>
+</body>
+</html>
