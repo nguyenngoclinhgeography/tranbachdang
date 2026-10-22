@@ -1,0 +1,9 @@
+SA BÀN BẠCH ĐẰNG 938 — BẢN SỬA VỊ TRÍ BẢNG DIỄN BIẾN
+
+1. Giải nén toàn bộ ZIP vào một thư mục.
+2. Mở index.html bằng Chrome hoặc Microsoft Edge.
+3. Bảng «Diễn biến & câu hỏi» tự nằm trên thanh tiến trình và cách một khoảng 18 px.
+4. Nếu cửa sổ máy tính quá thấp, có thể cuộn chuột trong bảng diễn biến để đọc hết câu hỏi.
+5. Trên điện thoại, giao diện bảng vẫn mở/thu gọn như V7.
+
+Các chức năng 3D, âm thanh, tệp MP3 và trình tự trận đánh giữ nguyên từ V7.

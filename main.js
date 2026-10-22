@@ -987,3 +987,42 @@ function launch(){try{
  catch(e){showError(e);}}
 launch();
 })();
+
+
+/* V7 · FIX BẢNG DIỄN BIẾN: giữ bảng nằm phía trên timeline */
+(function keepStoryAboveTimeline(){
+  const story = document.getElementById('storyPanel');
+  const timeline = document.querySelector('.timeline-panel');
+  const heading = document.querySelector('.masthead');
+  if (!story || !timeline || !heading) return;
+  let scheduled = false;
+  function positionStory(){
+    scheduled = false;
+    // Bố cục điện thoại đã đặt bảng ở phần trên; không thay đổi.
+    if (window.matchMedia('(max-width: 750px)').matches) {
+      story.style.removeProperty('bottom');
+      story.style.removeProperty('max-height');
+      story.style.removeProperty('overflow-y');
+      return;
+    }
+    const timeTop = timeline.getBoundingClientRect().top;
+    const headingBottom = heading.getBoundingClientRect().bottom;
+    const gap = 18; // Khoảng cách giữa bảng nội dung và thanh thời gian
+    story.style.bottom = Math.ceil(window.innerHeight - timeTop + gap) + 'px';
+    // Màn hình thấp: giữ phần bảng không che tiêu đề và cho cuộn trong bảng.
+    const room = Math.max(112, Math.floor(timeTop - headingBottom - 18));
+    story.style.maxHeight = room + 'px';
+    story.style.overflowY = 'auto';
+  }
+  function scheduleStory(){
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(positionStory);
+  }
+  window.addEventListener('resize', scheduleStory, {passive:true});
+  if (typeof ResizeObserver !== 'undefined') {
+    const observer = new ResizeObserver(scheduleStory);
+    observer.observe(timeline);
+  }
+  scheduleStory();
+})();

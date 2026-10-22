@@ -365,3 +365,9 @@ h1,h2,h3,h4,p,.panel-head-label,.story-question{
 .sound-settings-popup #soundStatus{font-size:11px}
 .sound-caption.is-expanded #soundCaptionText{white-space:normal;overflow:visible;text-overflow:clip;display:block;-webkit-line-clamp:unset;overflow-wrap:break-word}
 @media(max-width:750px){.sound-settings-popup{max-height:min(66dvh,480px);overflow:auto}}
+
+
+/* V7 · Chừa lối cho thanh thời gian; phần tính vị trí tự động do main.js thực hiện. */
+@media (min-width:751px){
+  .story-panel{overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#668596 transparent;}
+}
