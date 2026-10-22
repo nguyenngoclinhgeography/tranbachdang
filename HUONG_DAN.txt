@@ -1,44 +1,74 @@
-SA BÀN 3D TRẬN BẠCH ĐẰNG NĂM 938 — PHIÊN BẢN 4
+SA BÀN BẠCH ĐẰNG NĂM 938 — PHIÊN BẢN V6: THUYẾT MINH VÀ HIỆU ỨNG
+====================================================================
 
-1. MỞ TRÊN MÁY TÍNH (không cần Internet)
-   - Giải nén toàn bộ tệp ZIP.
-   - Đặt index.html, main.js, style.css cùng một thư mục.
-   - Nhấp đúp index.html bằng Microsoft Edge/Google Chrome.
-   - Nếu mở không được, thử chạy qua VS Code Live Server hoặc web server tĩnh; không cần thư viện bên ngoài.
+CÁCH CHẠY
+1. Giải nén TOÀN BỘ thư mục Bach_Dang_938_3D_Phien_Ban_6.
+2. Trên máy tính: mở file index.html bằng Microsoft Edge hoặc Google Chrome.
+3. Giữ nguyên index.html, main.js, audio.js, style.css và thư mục audio/ ở cạnh nhau.
+4. KHÔNG cần Internet để xem sa bàn, nghe giọng nam tổng hợp MP3 và hiệu ứng.
 
-2. ĐIỀU KHIỂN
-   - Kéo chuột/1 ngón tay: xoay sa bàn.
-   - Lăn chuột / chụm hai ngón tay: phóng to và thu nhỏ.
-   - Bấm nút Cận cảnh bãi cọc, hoặc chạm nhãn BÃI CỌC NGẦM: mở tư liệu lịch sử.
-   - Bắt đầu / Tạm dừng / Về đầu / Kéo thanh tua 00:00–01:00.
-   - Các bảng Điều khiển, Chú giải, Diễn biến & câu hỏi đều có nút + / − để thu gọn.
-   - Trên điện thoại, các bảng thu gọn khi vừa mở nhằm chừa không gian xem mô hình.
+BẬT/TẮT ÂM THANH
+- Ban đầu loa TẮT để không gây tiếng bất ngờ trong lớp.
+- Nhấn nút 🔇 Bật âm thanh ở thanh tiến trình. Nhấn lại để tắt toàn bộ tiếng.
+- Khi bật loa, lời dẫn sẽ đọc giai đoạn đang xem và hiệu ứng chạy theo thời gian.
+- Nhấn ⚙ Âm thanh để chọn chỉ nghe giọng đọc / chỉ nghe hiệu ứng, đổi kiểu giọng
+  và điều chỉnh âm lượng.
+- Chọn “Ưu tiên nam tự nhiên (nếu có)” để dùng giọng nam tiếng Việt do
+  trình duyệt/hệ điều hành cung cấp, ví dụ NamMinh. Không phải thiết bị nào
+  cũng có sẵn giọng này. Nếu không có, hệ thống tự chuyển sang MP3 tổng hợp.
+- Chọn “Nam tổng hợp · dùng offline” để luôn dùng các tệp giọng đọc nam trong audio/.
+  Giọng tổng hợp offline còn hạn chế về độ tự nhiên và ngữ điệu. Các file MP3 có
+  thể được thay bằng bản giọng nam chất lượng cao hơn, GIỮ NGUYÊN TÊN TỆP.
+- Không thể tự động phát tiếng khi tải trang vì trình duyệt yêu cầu thao tác bật loa.
 
-3. DIỄN BIẾN ĐỂ QUAN SÁT
-   - 00:00: Quân ta bố trí phục kích, thuyền Nam Hán chờ ngoài cửa sông.
-   - 00:08–00:15: Thuyền nhẹ quân ta tiến từ trong ra ngoài khiêu chiến.
-   - 00:15–00:25: Quân ta giả rút về phía trong, quân Nam Hán đuổi theo.
-   - 00:25–00:44: Nước triều rút, thuyền địch tìm cách ra biển.
-   - 00:44–01:00: Thuyền mắc cọc, đổ nghiêng, lính rơi xuống nước; có lửa và khói cách điệu.
-   - Sau 01:00: Thanh tua dừng nhưng sóng, lửa, khói và dao động nhẹ vẫn tiếp tục.
+DIỄN BIẾN LỜI DẪN VÀ ÂM THANH
+00:00  Chuẩn bị bãi cọc và bố trí mai phục; tiếng nước nền khi bắt đầu phát.
+00:07  Triều lên, thuyền ta ra khiêu chiến; tiếng mái chèo, nước khuấy.
+00:15  Quân ta giả rút; tiếng mái chèo di chuyển.
+00:22  Quân Nam Hán tiến sâu vào trận địa; âm thanh sông và chèo thuyền.
+00:27  Nước rút, các cọc dần lộ ra.
+00:39  Quân ta phản công; tiếng tên rít và tiếng binh khí.
+00:44  Thuyền địch mắc cọc; tiếng va thân gỗ và tiếng kim loại.
+00:49  Thuyền hư hại, chìm, người rơi xuống nước; tiếng sóng vỗ, nước bắn,
+       tiếng cháy lách tách (minh họa nghệ thuật).
+00:57  Giọng đọc tổng kết chiến thắng Bạch Đằng.
+01:00  Thời gian phim kết thúc nhưng sóng nước và lửa vẫn tiếp tục có âm thanh,
+       tương ứng với hình ảnh tiếp tục chuyển động. Nhấn tắt loa để ngắt tiếng.
 
-4. XEM TRÊN ĐIỆN THOẠI
-   - Có thể mở qua đường dẫn website tĩnh khi đăng lên hosting tĩnh.
-   - Nếu muốn mở offline, hãy chép đủ 3 file vào cùng thư mục trên thiết bị và dùng ứng dụng/trình duyệt cho phép mở HTML cục bộ.
-   - Nên xoay ngang điện thoại nếu muốn thấy sa bàn lớn hơn; có thể thu gọn từng bảng.
+TUA / TẠM DỪNG
+- Kéo thanh tiến trình tới thời điểm khác: dừng phim và ngắt lời đọc cũ.
+- Nhấn Bắt đầu / Tiếp tục: đọc giai đoạn tương ứng, hiệu ứng xuất hiện đúng lúc.
+- Nhấn Tạm dừng: lời đọc và hiệu ứng tạm ngắt (trừ cảnh cuối sau 01:00).
+- Tốc độ 1x / 1.5x / 2x có thể làm giọng đọc nhanh hơn.
+- Âm thanh chiến đấu, tiếng mũi tên, cháy thuyền là âm thanh tổng hợp MINH HỌA;
+  không phải tư liệu âm thanh gốc của sự kiện lịch sử.
 
-5. TƯ LIỆU LỊCH SỬ
-   Bảo tàng Lịch sử Quốc gia:
-   https://baotanglichsuquocgia.vn/vi/Articles/3098/13934/ngo-quyen-va-chien-thang-bach-djang-nam-938.html
-   https://baotanglichsuquocgia.vn/vi/Articles/3098/16483/ngo-quyen-nguoi-mo-djau-ky-nguyen-djoc-lap-cho-djat-nuoc-thoat-khoi-nghin-nam-bac-thuoc.html
+MỞ TRÊN ĐIỆN THOẠI
+- Có thể giải nén ZIP và mở index.html nếu ứng dụng trình duyệt cho phép truy cập
+  các file nằm chung thư mục. Nhiều hệ điều hành điện thoại giới hạn file://.
+- Để sử dụng rộng rãi trên điện thoại, tải nguyên thư mục lên một nơi lưu trữ
+  website tĩnh (hosting) và truy cập qua liên kết HTTPS. Không yêu cầu backend.
+- Dùng các bảng thu gọn để tối đa hóa vùng nhìn sa bàn trên màn hình nhỏ.
 
-LƯU Ý: Sa bàn mô phỏng theo mô hình thủ công người dùng cung cấp; vị trí/thuyền/quân phục/số lượng cọc/hiệu ứng hỏa hoạn được minh họa, không phải phục dựng khảo cổ chính xác. Mục đích chính là giúp học sinh hiểu thủy triều, bãi cọc, nhử địch và phối hợp mai phục.
+NGUỒN THAM KHẢO NỘI DUNG LỜI DẪN
+Bảo tàng Lịch sử Quốc gia — “Ngô Quyền và chiến thắng Bạch Đằng năm 938”
+https://baotanglichsuquocgia.vn/vi/Articles/3098/13934/ngo-quyen-va-chien-thang-bach-djang-nam-938.html
+Bảo tàng Lịch sử Quốc gia — “Kỷ niệm 1075 năm chiến thắng Bạch Đằng lần thứ nhất”
+https://baotanglichsuquocgia.vn/vi/Articles/2002/68092/ky-niem-1075-nam-11-938-11-2013-chien-thang-bach-djang-lan-thu-nhat.html
+
+CÁC TỆP TRONG ZIP
+- index.html   : giao diện, các nút âm thanh
+- style.css    : bố cục và hỗ trợ điện thoại
+- main.js      : sa bàn và thanh tiến trình
+- audio.js     : phát lời thuyết minh và tổng hợp tiếng động
+- audio/*.mp3  : 9 đoạn giọng nam dự phòng (không cần Internet)
+- audio/THUYET_MINH.txt : văn bản của các đoạn thuyết minh
+
+LƯU Ý SƯ PHẠM
+Âm thanh va chạm, tiếng tên bắn, cháy thuyền, hình thức trang phục và cách bố trí
+cọc đều mang tính minh họa nhằm giúp học sinh hình dung chiến thuật, không khẳng
+định phục dựng chính xác từng chi tiết của trận đánh năm 938.
 
 
-BẢN 5 — MŨI TÊN ĐỎ & CHÚ GIẢI
-- 00:08–00:15: mũi tên đỏ tiến từ trong sông ra cửa sông, minh họa quân ta khiêu chiến.
-- 00:15–00:27: mũi tên đỏ đổi hướng vào sâu trong sông, minh họa giả rút nhử địch.
-- Từ 00:27: mũi tên đỏ nối tiếp về phía sau, minh họa quân ta thoát qua lối đã chuẩn bị.
-- Mở “Chú giải”: mỗi nội dung là một dòng riêng, kể cả trên điện thoại.
-- Thu gọn “Chú giải”: khung nhỏ lại giống bảng điều khiển và bảng diễn biến.
-- Khi cần nhìn thoáng sa bàn, bấm biểu tượng thu gọn hoặc chọn Chế độ trình chiếu.
+---
+Phien ban V7 bo sung: xem HUONG_DAN_V7.txt ve giong doc.

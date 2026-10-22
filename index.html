@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#071d2e">
   <title>Bạch Đằng 938 | Sa bàn 3D · Diễn biến toàn trận</title>
   <link rel="stylesheet" href="style.css">
+  <script src="audio.js" defer></script>
   <script src="main.js" defer></script>
 </head>
 <body>
@@ -62,6 +63,28 @@
         <button type="button" data-seek="44"><b>00:44</b><span>Mắc cọc</span></button>
         <button type="button" data-seek="52"><b>00:52</b><span>Đánh chìm</span></button>
         <button type="button" data-seek="60"><b>01:00</b><span>Chiến thắng</span></button>
+      </div>
+      <div class="soundbar" aria-label="Thuyết minh và âm thanh mô phỏng">
+        <button type="button" id="btnAudio" class="sound-toggle" aria-pressed="false" aria-label="Bật âm thanh thuyết minh và hiệu ứng">🔇 <span>Bật âm thanh</span></button>
+        <div class="sound-caption" id="soundCaption" role="status" aria-live="off"><span class="caption-number">LỜI DẪN · 00:00</span><span id="soundCaptionText">Bật loa để nghe thuyết minh trận Bạch Đằng.</span></div>
+        <details class="sound-settings" id="soundSettings">
+          <summary title="Tùy chỉnh âm thanh" aria-label="Tùy chỉnh âm thanh">⚙ <span>Âm thanh</span></summary>
+          <div class="sound-settings-popup">
+            <strong>TÙY CHỈNH ÂM THANH</strong>
+            <label class="sound-check"><input type="checkbox" id="soundVoice" checked> Giọng thuyết minh</label>
+            <label class="sound-check"><input type="checkbox" id="soundEffects" checked> Tiếng chèo thuyền, va cọc, tên bắn và lửa cháy</label>
+            <label for="soundVoiceMode">Giọng đọc</label>
+            <select id="soundVoiceMode"><option value="auto">Giọng tiếng Việt có trên máy (ưu tiên nam)</option><option value="offline">Giọng nam offline – đã lọc và làm chậm</option></select>
+            <label for="soundVoiceRate">Tốc độ giọng đọc <output id="soundVoiceRateLabel">1,00×</output></label>
+            <input id="soundVoiceRate" type="range" min="80" max="115" step="5" value="100" aria-label="Chỉnh tốc độ đọc thuyết minh">
+            <label for="soundFxLevel">Âm lượng tiếng chiến trận <output id="soundFxLevelLabel">30%</output></label>
+            <input id="soundFxLevel" type="range" min="0" max="100" step="5" value="30" aria-label="Chỉnh riêng âm lượng hiệu ứng để không át lời thuyết minh">
+            <button id="btnVoiceSample" class="sound-sample-button" type="button">▶ Nghe thử câu thuyết minh ở giai đoạn này</button>
+            <label for="soundVolume">Âm lượng tổng <output id="soundVolumeLabel">75%</output></label>
+            <input id="soundVolume" type="range" min="0" max="100" step="5" value="75" aria-label="Âm lượng thuyết minh và hiệu ứng">
+            <p id="soundStatus">Âm thanh chỉ bắt đầu khi bạn bấm nút loa.</p>
+          </div>
+        </details>
       </div>
       <p class="timeline-tip">Kéo thanh để tua xuôi/ngược; kéo chuột trên sa bàn để xoay 360°. <span id="rendererMode">Không cần Internet.</span></p>
     </section>

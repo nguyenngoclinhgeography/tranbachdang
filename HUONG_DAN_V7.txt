@@ -1,0 +1,51 @@
+SA BÀN BẠCH ĐẰNG NĂM 938 — V7: CẢI THIỆN ĐỘ RÕ LỜI THUYẾT MINH
+==================================================================
+
+MỞ TRANG WEB
+1) Giải nén ZIP thành một thư mục trên máy tính.
+2) Mở index.html bằng Microsoft Edge hoặc Google Chrome.
+3) KHÔNG tách rời thư mục audio khỏi các tệp code.
+4) Website hoạt động offline với 9 đoạn MP3 dự phòng và hiệu ứng chiến trận.
+
+NGHE THUYẾT MINH RÕ HƠN
+1) Nhấn nút loa (🔇 -> 🔊) ở thanh thời gian.
+2) Nhấn ⚙ Âm thanh.
+3) Trong "Giọng đọc":
+   - Ưu tiên giọng tiếng Việt có sẵn trên máy; máy có giọng nam sẽ ưu tiên nam.
+   - Nếu chỉ có giọng tiếng Việt khác, hệ thống có thể chọn giọng đó thay vì
+     ép giọng tiếng Anh đọc tiếng Việt.
+   - Chọn "Giọng nam offline – đã lọc và làm chậm" nếu muốn luôn phát MP3
+     đi kèm mà không cần mạng.
+4) Kéo "Tốc độ giọng đọc": gợi ý 0,90× – 1,00×, tránh nhanh quá.
+5) Kéo "Âm lượng tiếng chiến trận": gợi ý 15% – 30%.
+6) Nhấn "Nghe thử câu thuyết minh ở giai đoạn này" để so sánh chất giọng.
+7) Âm lượng tổng: gợi ý 75% – 90%, tăng âm lượng loa ngoài nếu cần.
+
+NHỮNG GÌ ĐÃ ĐƯỢC SỬA
+- Cả 9 đoạn MP3 dự phòng được xử lý bằng lọc âm, nén động và chuẩn hóa độ to;
+  kéo chậm nhẹ nhưng không cố ý hạ tông giọng.
+- Phân biệt thanh tốc độ giọng và tốc độ hoạt cảnh: tăng phim 2× sẽ KHÔNG
+  kéo giọng đọc lên 2× làm khó nghe như phiên bản trước.
+- Hiệu ứng sông, tên bắn, va cọc, cháy thuyền nhỏ hơn mặc định và tự động
+  giảm tiếp khi có lời thuyết minh đang phát.
+- Có nút nghe thử và chọn từng giọng tiếng Việt mà trình duyệt cung cấp.
+- Chỉ thay đổi module âm thanh và giao diện tùy chỉnh, giữ nguyên sa bàn V6.
+
+GIỚI HẠN QUAN TRỌNG
+- Các MP3 dự phòng là giọng tổng hợp thế hệ cũ được xử lý lại, KHÔNG PHẢI
+  bản thu giọng nam diễn cảm mới. Lọc âm không thể sửa hết phát âm tiếng Việt
+  hoặc làm giọng máy thành giọng người thật.
+- Nếu muốn giọng nam thật tự nhiên ở buổi dự thi, cách tốt nhất là tự ghi âm
+  hoặc xuất MP3 từ một dịch vụ chuyển văn bản thành giọng nói chất lượng cao.
+  Dùng nội dung trong audio/THUYET_MINH.txt; xuất các đoạn và thay vào
+  audio/00-tran-dia.mp3 ... audio/08-chien-thang.mp3 đúng tên, rồi mở lại trang.
+  Khuyến nghị giọng đọc: nam tiếng Việt, 0,9×, ngắt câu rõ ràng, không có
+  nhạc nền. Nên để mỗi đoạn đọc vừa đủ thời lượng đến mốc kế tiếp.
+- Giọng hệ điều hành không luôn có sẵn và đôi khi cần Internet. Nếu không có
+  giọng tiếng Việt hệ thống, bản MP3 offline sẽ được phát.
+- Trình duyệt thường cần một lần bấm nút loa hoặc "Nghe thử" để cho phép phát.
+
+GIÁO DỤC LỊCH SỬ
+Âm thanh trận chiến mang tính minh họa, không phải bản phục dựng âm thanh
+có thật từ sự kiện năm 938. Tư liệu nội dung vẫn dựa trên nguồn lịch sử
+được ghi trong HUONG_DAN.txt và phần tư liệu bãi cọc trên website.

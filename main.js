@@ -573,10 +573,12 @@ function seek(t,autoPlay=false){
  if(sceneState.time>=27&&sceneState.view!=='focus')setView('focus');
  sceneState.finished=sceneState.time>=DURATION;
  syncButtons();syncTimeline();updateSimulation(0);
+ if(window.BachAudio)window.BachAudio.onSeek({time:sceneState.time,paused:sceneState.paused,speed:sceneState.speed});
 }
 function togglePlaying(){
  if(sceneState.time>=DURATION){sceneState.time=0;lastChapter='';}
  sceneState.paused=!sceneState.paused;syncButtons();syncTimeline();
+ if(window.BachAudio)window.BachAudio.onTransport({time:sceneState.time,paused:sceneState.paused,speed:sceneState.speed});
 }
 function startHigh(){seek(7,true);setView('focus');}
 function startLow(){seek(27,true);setView('focus');}
@@ -921,7 +923,7 @@ function bindUI(){
  $('timelineRange').addEventListener('input',e=>seek(e.target.value,false));
  document.querySelectorAll('[data-seek]').forEach(b=>b.addEventListener('click',()=>seek(b.dataset.seek,false)));
  $('btnPause').addEventListener('click',togglePlaying);
- $('btnSpeed').addEventListener('click',()=>{const steps=[1,1.5,2],i=steps.indexOf(sceneState.speed);sceneState.speed=steps[(i+1)%3];$('btnSpeed').innerHTML=`◷ <span>${sceneState.speed}×</span>`;});
+ $('btnSpeed').addEventListener('click',()=>{const steps=[1,1.5,2],i=steps.indexOf(sceneState.speed);sceneState.speed=steps[(i+1)%3];$('btnSpeed').innerHTML=`◷ <span>${sceneState.speed}×</span>`;if(window.BachAudio)window.BachAudio.onSpeed(sceneState.speed);});
  $('stakeMarker').addEventListener('click',openStakeInfo);
  const pointers=new Map();let pointerDown=null,lastPinchDistance=0;
  canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,[e.clientX,e.clientY]);
@@ -953,6 +955,7 @@ let running=false;
 function frame(ts){if(!running)return;
  let dt=sceneState.lastTimestamp?clamp((ts-sceneState.lastTimestamp)/1000,0,.06):.016;sceneState.lastTimestamp=ts;
  updateSimulation(dt);updateOrbit(dt);
+ if(window.BachAudio)window.BachAudio.onFrame({time:sceneState.time,paused:sceneState.paused,speed:sceneState.speed,finished:sceneState.finished});
  const seconds=sceneState.ambientTime;
  if(!fallback2D||ts-lastFallbackFrame>46){render(seconds);lastFallbackFrame=ts;}
  if(sceneState.frame++%2===0)updateLabels();

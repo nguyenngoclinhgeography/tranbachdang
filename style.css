@@ -322,3 +322,46 @@ h1,h2,h3,h4,p,.panel-head-label,.story-question{
 @media (max-width:750px){
   .right-rail .legend-panel{display:block!important;visibility:visible!important;}
 }
+
+/* V6 · Thanh loa, giọng thuyết minh và hiệu ứng — không che sa bàn trên di động */
+.soundbar{display:flex;align-items:center;gap:9px;padding-top:7px;margin-top:7px;border-top:1px solid rgba(161,206,216,.18);min-width:0;position:relative}
+.sound-toggle{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:34px;padding:7px 11px;border-radius:9px;border:1px solid rgba(112,196,215,.52);background:rgba(18,64,84,.9);color:#e1f4f5;font-size:11px;font-weight:800;cursor:pointer}
+.sound-toggle.is-on{background:#157b6e;border-color:#7fdccc;color:white}
+.sound-toggle:focus-visible,.sound-settings summary:focus-visible{outline:2px solid #ffd394;outline-offset:2px}
+.sound-caption{flex:1;display:flex;align-items:center;gap:8px;min-width:0;color:#d7e9ec;line-height:1.35;font-size:11px}
+.caption-number{flex:none;white-space:nowrap;color:#efc18b;font-weight:850;font-size:9px;letter-spacing:.5px}
+#soundCaptionText{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sound-settings{flex:none;position:static}
+.sound-settings summary{list-style:none;border:1px solid rgba(158,191,202,.38);background:#203949;color:#e6f1f3;padding:8px 11px;min-height:34px;cursor:pointer;border-radius:9px;font-size:11px;font-weight:750;white-space:nowrap}
+.sound-settings summary::-webkit-details-marker{display:none}
+.sound-settings-popup{position:absolute;right:0;bottom:calc(100% + 12px);z-index:25;width:min(315px,calc(100vw - 24px));display:flex;flex-direction:column;gap:9px;padding:15px;background:#092333;border:1px solid rgba(230,179,118,.6);border-radius:13px;color:#e6f4f5;box-shadow:0 16px 45px #0009;font-size:12px}
+.sound-settings-popup strong{color:#ffce92;letter-spacing:.8px;font-size:11px}
+.sound-settings-popup label{display:block;color:#cfe7e9;line-height:1.45}
+.sound-settings-popup .sound-check{display:flex;gap:8px;align-items:flex-start}
+.sound-settings-popup input[type=checkbox]{flex:none;width:16px;height:16px;accent-color:#31aeb5;margin-top:1px}
+.sound-settings-popup select{font:inherit;border-radius:7px;padding:8px;width:100%;background:#153a4d;color:#f1faff;border:1px solid #4e8995}
+.sound-settings-popup input[type=range]{accent-color:#e9a96c;width:100%;cursor:pointer}
+.sound-settings-popup output{float:right;color:#ffe0b9}
+#soundStatus{font-size:11px;line-height:1.55;color:#aad0d3;margin:2px 0 0}
+@media(max-width:750px){
+ .right-rail,.story-panel{max-height:calc(100dvh - 300px)}
+ .soundbar{gap:5px;margin-top:5px;padding-top:5px}
+ .sound-toggle{padding:6px 8px;min-height:32px;font-size:12px}
+ .sound-toggle span{display:none}
+ .sound-caption{font-size:10px;line-height:1.3;display:block}
+ .caption-number{display:none}
+ #soundCaptionText{display:-webkit-box;white-space:normal;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow-wrap:anywhere}
+ .sound-settings summary{padding:7px;min-height:32px;font-size:12px}
+ .sound-settings summary span{display:none}
+ .sound-settings-popup{right:0;bottom:calc(100% + 10px);max-height:calc(100dvh - 205px);overflow-y:auto}
+}
+.sound-settings:not([open]) > .sound-settings-popup{display:none!important}
+
+/* V7 — Giọng rõ, có thể thử nghe và chỉnh riêng âm lượng hiệu ứng. */
+.sound-sample-button{font:inherit;font-weight:750;color:#0b2937;background:#f0bf7f;border:1px solid #ffd8a4;border-radius:9px;padding:10px 9px;min-height:38px;cursor:pointer;text-align:center}
+.sound-sample-button:hover{background:#ffdfad}
+.sound-settings-popup{gap:8px}
+.sound-settings-popup input[type=range]{min-height:20px}
+.sound-settings-popup #soundStatus{font-size:11px}
+.sound-caption.is-expanded #soundCaptionText{white-space:normal;overflow:visible;text-overflow:clip;display:block;-webkit-line-clamp:unset;overflow-wrap:break-word}
+@media(max-width:750px){.sound-settings-popup{max-height:min(66dvh,480px);overflow:auto}}
